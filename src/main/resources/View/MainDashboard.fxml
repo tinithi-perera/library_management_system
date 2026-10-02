@@ -20,6 +20,7 @@
                </font>
             </Label>
             <Button fx:id="btnAddBook" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="30.0" prefWidth="143.0" text="Add Book" />
+            <Button fx:id="btnAddMember" mnemonicParsing="false" onAction="#btnAddMemberOnAction" prefHeight="30.0" prefWidth="143.0" text="Add Member" />
             <Button fx:id="btnMembers" mnemonicParsing="false" onAction="#btnMembersOnAction" prefHeight="30.0" prefWidth="143.0" text="Members" />
             <Button fx:id="btnIssue" mnemonicParsing="false" onAction="#btnIssueOnAction" prefHeight="30.0" prefWidth="143.0" text="Issue Book" />
             <Button fx:id="btnReturn" mnemonicParsing="false" onAction="#btnReturnOnAction" prefHeight="30.0" prefWidth="143.0" text="Return Book" />
@@ -33,7 +34,7 @@
                   <Font name="Arial Narrow" size="36.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" text="logout" />
+            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#btnLogoutOnAction" text="logout" />
          </children>
       </HBox>
       <GridPane layoutX="163.0" layoutY="111.0" prefHeight="208.0" prefWidth="364.0">
@@ -42,31 +43,54 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="77.00000610351563" minHeight="10.0" prefHeight="77.00000610351563" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="138.8" minHeight="10.0" prefHeight="56.19999389648436" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="102.19998779296876" minHeight="0.0" prefHeight="62.199987792968756" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="111.99999389648437" minHeight="10.0" prefHeight="105.6" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="138.8" minHeight="10.0" prefHeight="101.80000000000001" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="35.0" prefWidth="146.0" text="Books: 250">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label text="Members: 120" GridPane.columnIndex="1">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label text="Borrowed: 35" GridPane.rowIndex="1">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label text="Overdue: 8" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font name="Arial" size="24.0" />
-               </font>
-            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="105.0" prefWidth="157.0">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="146.0" text="Books">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text="250" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="146.0" text="Members">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="120" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Borrowed">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="35" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Overdue">
+                     <font>
+                        <Font name="Arial" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="8" />
+               </children>
+            </VBox>
          </children>
       </GridPane>
    </children>

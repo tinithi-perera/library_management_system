@@ -1,23 +1,87 @@
 package Controllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainDashboardController {
-    public void btnAddBookOnAction(ActionEvent actionEvent) {
-        
+
+    @FXML
+    private Button btnAddBook;
+
+    @FXML
+    private Button btnAddMember;
+
+    @FXML
+    private Button btnHistory;
+
+    @FXML
+    private Button btnIssue;
+
+    @FXML
+    private Button btnLogout;
+
+    @FXML
+    private Button btnMembers;
+
+    @FXML
+    private Button btnReturn;
+
+    @FXML
+    void btnAddBookOnAction(ActionEvent event) {
+
+            try {
+                FXMLLoader loader = new FXMLLoader(
+                        getClass().getResource("/View/AddBook.fxml")
+                );
+
+                Scene scene = new Scene(loader.load());
+
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+
     }
 
-    public void btnMembersOnAction(ActionEvent actionEvent) {
-        
+    @FXML
+    void btnAddMemberOnAction(ActionEvent event) {
+
     }
 
-    public void btnIssueOnAction(ActionEvent actionEvent) {
-        
+    @FXML
+    void btnHistoryOnAction(ActionEvent event) {
+
     }
 
-    public void btnReturnOnAction(ActionEvent actionEvent) {
+    @FXML
+    void btnIssueOnAction(ActionEvent event) {
+
     }
 
-    public void btnHistoryOnAction(ActionEvent actionEvent) {
+    @FXML
+    void btnLogoutOnAction(ActionEvent event) {
+
     }
+
+    @FXML
+    void btnMembersOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnReturnOnAction(ActionEvent event) {
+
+    }
+
 }
