@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1abc9c;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginPageController">
    <children>
-      <Button fx:id="btnLogin" layoutX="138.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #3498db;" text="LOGIN">
+      <Button fx:id="btnLogin" layoutX="138.0" layoutY="292.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #3498db;" text="LOGIN">
          <font>
             <Font name="Berlin Sans FB" size="12.0" />
          </font>
@@ -23,10 +23,5 @@
          </font>
       </Label>
       <PasswordField fx:id="txtPassword" layoutX="205.0" layoutY="182.0" prefHeight="35.0" prefWidth="198.0" />
-      <Button fx:id="btnClear" layoutX="345.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #e74c3c;" text="CLEAR">
-         <font>
-            <Font name="Berlin Sans FB" size="12.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
