@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HistoryController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BorrowingHistoryController">
    <children>
       <Label layoutX="156.0" layoutY="46.0" text="BORROWING HISTORY">
          <font>
@@ -20,7 +19,7 @@
       <TextField fx:id="txtMemberId" layoutX="170.0" layoutY="119.0" />
       <TableView fx:id="tblHistory" layoutX="79.0" layoutY="170.0" prefHeight="200.0" prefWidth="450.0">
         <columns>
-          <TableColumn fx:id="colMemberID" prefWidth="75.0" text="Member ID" />
+          <TableColumn fx:id="colMemberId" prefWidth="75.0" text="Member ID" />
           <TableColumn fx:id="colBookTitle" prefWidth="75.0" text="Book Title" />
             <TableColumn fx:id="colIssueDate" prefWidth="75.0" text="Issue Date" />
             <TableColumn fx:id="colDueDate" prefWidth="75.0" text="Due Date" />
