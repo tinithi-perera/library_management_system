@@ -9,6 +9,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextInputDialog;
 
 public class ManageMembersController {
 
@@ -32,6 +35,10 @@ public class ManageMembersController {
 
     @FXML
     private TableColumn<Member, String> colAddress;
+
+    @FXML
+    private ObservableList<Member> members =
+            FXCollections.observableArrayList();
 
 
     @FXML
@@ -58,7 +65,6 @@ public class ManageMembersController {
         );
 
 
-        ObservableList<Member> members = FXCollections.observableArrayList();
 
         members.add(new Member(
                 "M001",
@@ -82,6 +88,22 @@ public class ManageMembersController {
 
     @FXML
     void btnSearchOnAction(ActionEvent event) {
+        String searchText = txtSearch.getText().toLowerCase();
+
+        ObservableList<Member> searchResults =
+                FXCollections.observableArrayList();
+
+        for (Member member : members) {
+
+            if (member.getMemberId().toLowerCase().contains(searchText)
+                    || member.getFullName().toLowerCase().contains(searchText)
+                    || member.getEmail().toLowerCase().contains(searchText)) {
+
+                searchResults.add(member);
+            }
+        }
+
+        tblMembers.setItems(searchResults);
 
     }
 
@@ -89,11 +111,81 @@ public class ManageMembersController {
     @FXML
     void btnEditOnAction(ActionEvent event) {
 
-    }
+            Member selectedMember = tblMembers.getSelectionModel().getSelectedItem();
+
+            if (selectedMember == null) {
+
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Edit Member");
+                alert.setHeaderText(null);
+                alert.setContentText("Please select a member to edit.");
+                alert.showAndWait();
+
+                return;
+            }
+
+            TextInputDialog dialog = new TextInputDialog(selectedMember.getFullName());
+
+            dialog.setTitle("Edit Member");
+            dialog.setHeaderText("Edit Member Name");
+            dialog.setContentText("Full Name:");
+
+            dialog.showAndWait().ifPresent(newName -> {
+
+                if (!newName.trim().isEmpty()) {
+
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Edit Member");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Member details updated successfully.");
+                    alert.showAndWait();
+                }
+            });
+        }
+
+
+
+
 
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        Member selectedMember = tblMembers.getSelectionModel().getSelectedItem();
 
+        if (selectedMember == null) {
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Delete Member");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select a member to delete.");
+            alert.showAndWait();
+
+            return;
+        }
+
+        Alert alert = new Alert(
+                Alert.AlertType.CONFIRMATION,
+                "Are you sure you want to delete this member?",
+                ButtonType.YES,
+                ButtonType.NO
+        );
+
+        alert.setTitle("Delete Member");
+        alert.setHeaderText(null);
+
+        alert.showAndWait();
+
+        if (alert.getResult() == ButtonType.YES) {
+
+            members.remove(selectedMember);
+
+            tblMembers.setItems(members);
+
+            Alert success = new Alert(Alert.AlertType.INFORMATION);
+            success.setTitle("Delete Member");
+            success.setHeaderText(null);
+            success.setContentText("Member deleted successfully.");
+            success.showAndWait();
+        }
     }
 }
