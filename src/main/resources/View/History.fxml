@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HistoryController">
+   <children>
+      <Label layoutX="156.0" layoutY="46.0" text="BORROWING HISTORY">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="123.0" text="MEMBER ID:" />
+      <TextField fx:id="txtMemberId" layoutX="170.0" layoutY="119.0" />
+      <TableView fx:id="tblHistory" layoutX="79.0" layoutY="170.0" prefHeight="200.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="colMemberID" prefWidth="75.0" text="Member ID" />
+          <TableColumn fx:id="colBookTitle" prefWidth="75.0" text="Book Title" />
+            <TableColumn fx:id="colIssueDate" prefWidth="75.0" text="Issue Date" />
+            <TableColumn fx:id="colDueDate" prefWidth="75.0" text="Due Date" />
+            <TableColumn fx:id="colReturnDate" prefWidth="75.0" text="Return Date" />
+            <TableColumn fx:id="colStatus" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSearch" layoutX="381.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search" />
+   </children>
+</AnchorPane>
