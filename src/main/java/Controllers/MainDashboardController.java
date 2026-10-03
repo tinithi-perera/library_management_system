@@ -57,6 +57,21 @@ public class MainDashboardController {
     @FXML
     void btnAddMemberOnAction(ActionEvent event) {
 
+            try {
+                FXMLLoader loader = new FXMLLoader(
+                        getClass().getResource("/View/AddMember.fxml")
+                );
+
+                Scene scene = new Scene(loader.load());
+
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
     }
 
     @FXML
@@ -76,6 +91,20 @@ public class MainDashboardController {
 
     @FXML
     void btnMembersOnAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/View/ManageMembers.fxml")
+            );
+
+            Scene scene = new Scene(loader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
