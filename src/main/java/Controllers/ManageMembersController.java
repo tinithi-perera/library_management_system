@@ -5,13 +5,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextInputDialog;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class ManageMembersController {
 
@@ -39,6 +39,8 @@ public class ManageMembersController {
     @FXML
     private ObservableList<Member> members =
             FXCollections.observableArrayList();
+    @FXML
+    private Button btnBack;
 
 
     @FXML
@@ -187,5 +189,27 @@ public class ManageMembersController {
             success.setContentText("Member deleted successfully.");
             success.showAndWait();
         }
+    }
+   @FXML
+    public void btnBackOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/View/MainDashboard.fxml")
+            );
+
+            Scene scene = new Scene(loader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+            Stage currentStage = (Stage) btnBack.getScene().getWindow();
+            currentStage.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
     }
 }

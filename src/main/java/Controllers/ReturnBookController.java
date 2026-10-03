@@ -2,7 +2,12 @@ package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 
 public class ReturnBookController {
@@ -30,6 +35,8 @@ public class ReturnBookController {
 
     @FXML
     private TextField txtMember;
+    @FXML
+    private Button btnBack;
     @FXML
     public void initialize() {
 
@@ -105,5 +112,26 @@ public class ReturnBookController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+   @FXML
+    public void btnBackOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/View/MainDashboard.fxml")
+            );
 
+            Scene scene = new Scene(loader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+            Stage currentStage = (Stage) btnBack.getScene().getWindow();
+            currentStage.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    }
 }

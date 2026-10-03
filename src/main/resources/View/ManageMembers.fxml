@@ -29,5 +29,6 @@
       </TableView>
       <Button fx:id="btnEdit" layoutX="151.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnEditOnAction" text="Edit" />
       <Button fx:id="btnDelete" layoutX="367.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="Delete" />
+      <Button fx:id="btnBack" layoutX="531.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back" />
    </children>
 </AnchorPane>

@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.IssueBookController">
    <children>
       <Label layoutX="227.0" layoutY="40.0" prefHeight="32.0" prefWidth="146.0" text="ISSUE BOOK">
@@ -25,5 +24,6 @@
       <Button fx:id="btnClear" layoutX="321.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnClearOnAction" text="Clear" />
       <DatePicker fx:id="dateIssue" layoutX="186.0" layoutY="203.0" prefHeight="26.0" prefWidth="192.0" />
       <DatePicker fx:id="dateDue" layoutX="186.0" layoutY="242.0" prefHeight="26.0" prefWidth="192.0" />
+      <Button fx:id="btnBack" layoutX="434.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back" />
    </children>
 </AnchorPane>

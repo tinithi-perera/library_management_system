@@ -45,6 +45,9 @@ public class MainDashboardController {
                 Stage stage = new Stage();
                 stage.setScene(scene);
                 stage.show();
+                Stage currentStage = (Stage) btnReturn.getScene().getWindow();
+                currentStage.close();
+
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -67,6 +70,9 @@ public class MainDashboardController {
                 Stage stage = new Stage();
                 stage.setScene(scene);
                 stage.show();
+                Stage currentStage = (Stage) btnReturn.getScene().getWindow();
+                currentStage.close();
+
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -86,6 +92,9 @@ public class MainDashboardController {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
+            Stage currentStage = (Stage) btnReturn.getScene().getWindow();
+            currentStage.close();
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -105,6 +114,9 @@ public class MainDashboardController {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
+            Stage currentStage = (Stage) btnReturn.getScene().getWindow();
+            currentStage.close();
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -114,6 +126,23 @@ public class MainDashboardController {
 
     @FXML
     void btnLogoutOnAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/View/login_page.fxml")
+            );
+
+            Scene scene = new Scene(loader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+            Stage currentStage = (Stage) btnReturn.getScene().getWindow();
+            currentStage.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -129,12 +158,16 @@ public class MainDashboardController {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
+            Stage currentStage = (Stage) btnReturn.getScene().getWindow();
+            currentStage.close();
+
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
+
 
     @FXML
     void btnReturnOnAction(ActionEvent event) {
@@ -148,6 +181,9 @@ public class MainDashboardController {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
+            Stage currentStage = (Stage) btnReturn.getScene().getWindow();
+            currentStage.close();
+
 
         } catch (IOException e) {
             e.printStackTrace();

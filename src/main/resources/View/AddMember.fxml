@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="421.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddMemberController">
    <children>
       <Label layoutX="221.0" layoutY="37.0" text="ADD MEMBER">
@@ -26,5 +25,6 @@
       <TextField fx:id="txtAddress" layoutX="207.0" layoutY="271.0" prefHeight="26.0" prefWidth="238.0" />
       <Button fx:id="btnRegisterMember" layoutX="164.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" text="Register Member" />
       <Button fx:id="btnClear" layoutX="326.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnClearOnAction" text="Clear" />
+      <Button fx:id="btnBack" layoutX="445.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnbackOnAction" text="Back" />
    </children>
 </AnchorPane>

@@ -3,10 +3,15 @@ package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AddBookController {
 
@@ -30,6 +35,8 @@ public class AddBookController {
 
     @FXML
     private TextField txtPublishedYear;
+    @FXML
+    private Button btnBack;
 
     @FXML
     private TextField txtQuantity;
@@ -113,4 +120,24 @@ public class AddBookController {
         alert.showAndWait();
     }
 
+    public void btnBackOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/View/MainDashboard.fxml")
+            );
+
+            Scene scene = new Scene(loader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+            Stage currentStage = (Stage) btnBack.getScene().getWindow();
+            currentStage.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
