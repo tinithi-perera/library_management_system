@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+.label {
+    -fx-text-fill: #2f3640;
+}
+
+
+
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #dcdde1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 6 10;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498db;
+}
+
+
+
+
+.password-field {
+    -fx-background-color: white;
+    -fx-border-color: #dcdde1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 6 10;
+}
+
+.password-field:focused {
+    -fx-border-color: #3498db;
+}
+
+
+
+
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+    -fx-padding: 8 15;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+
+
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #dcdde1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.combo-box:focused {
+    -fx-border-color: #3498db;
+}
+
+
+
+
+.date-picker {
+    -fx-background-color: white;
+}
+
+.date-picker:focused {
+    -fx-border-color: #3498db;
+}
+
+
+
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dcdde1;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3498db;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #d6eaf8;
+    -fx-text-fill: black;
+}

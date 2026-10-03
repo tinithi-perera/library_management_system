@@ -5,8 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import java.net.URL?>
 
 <AnchorPane prefHeight="421.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddMemberController">
+    <stylesheets>
+        <URL value="@/style.css" />
+    </stylesheets>
    <children>
       <Label layoutX="221.0" layoutY="37.0" text="ADD MEMBER">
          <font>

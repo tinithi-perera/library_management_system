@@ -7,9 +7,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import java.net.URL?>
 
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReturnBookController">
+    <stylesheets>
+        <URL value="@/style.css" />
+    </stylesheets>
    <children>
       <Label layoutX="215.0" layoutY="37.0" text="RETURN BOOK">
          <font>
