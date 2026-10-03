@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReturnBookController">
+   <children>
+      <Label layoutX="215.0" layoutY="37.0" text="RETURN BOOK">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="96.0" text="BOOK:" />
+      <Label layoutX="119.0" layoutY="144.0" text="MEMBER:" />
+      <Label layoutX="116.0" layoutY="170.0" text="BORROWED DATE:" />
+      <Label layoutX="115.0" layoutY="207.0" text="DUE DATE:" />
+      <Label layoutX="115.0" layoutY="284.0" text="STATUS:" />
+      <Label layoutX="115.0" layoutY="245.0" text="RETURN DATE:" />
+      <Button fx:id="btnReturn" layoutX="152.0" layoutY="336.0" mnemonicParsing="false" onAction="#btnReturnOnAction" text="Return Book" />
+      <Button fx:id="btnClear" layoutX="324.0" layoutY="336.0" mnemonicParsing="false" onAction="#btnClearOnAction" text="Clear" />
+      <TextField fx:id="txtBook" layoutX="245.0" layoutY="92.0" prefHeight="26.0" prefWidth="246.0" />
+      <TextField fx:id="txtMember" layoutX="245.0" layoutY="127.0" prefHeight="26.0" prefWidth="246.0" />
+      <DatePicker fx:id="dateBorrowed" layoutX="246.0" layoutY="166.0" prefHeight="26.0" prefWidth="246.0" />
+      <DatePicker fx:id="dateDue" layoutX="245.0" layoutY="203.0" prefHeight="26.0" prefWidth="246.0" />
+      <DatePicker fx:id="dateReturn" layoutX="246.0" layoutY="241.0" prefHeight="26.0" prefWidth="246.0" />
+      <Label fx:id="lblStatus" layoutX="246.0" layoutY="284.0" prefHeight="18.0" prefWidth="70.0" />
+   </children>
+</AnchorPane>
